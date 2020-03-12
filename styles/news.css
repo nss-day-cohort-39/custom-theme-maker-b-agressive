@@ -1,0 +1,11 @@
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.newsItem {
+    flex-basis: 27%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
