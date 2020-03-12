@@ -23,19 +23,8 @@ const eventHub = document.querySelector("#container")
 eventHub.addEventListener("colorChosen", event => {
     const color = event.detail.color
 
-    //when color chosen add a color class to
-    
-        
+    const contentTarget = document.querySelector(".favorites")
 
-
-
-
-        //     export const FavoritesList = () => {
-        //         const favoriteItems = useFavorites()
-        //         return render(favoriteItems)
-        // }
-    
-        // eventHub.classList = []
-        // eventHub.classList.add(color)
+    contentTarget.classList.add(color)
      
 })
