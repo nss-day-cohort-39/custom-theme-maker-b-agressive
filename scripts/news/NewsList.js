@@ -24,6 +24,6 @@ eventHub.addEventListener("colorChosen", event => {
 
     const contentTarget = document.querySelector(".news")
 
-    contentTarget.classList.add(color)
-     
+    contentTarget.classList = []
+    contentTarget.classList.add("container__panel", "news", "scores", color)
 })

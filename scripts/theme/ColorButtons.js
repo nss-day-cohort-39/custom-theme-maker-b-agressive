@@ -15,7 +15,7 @@ export const ColorButtons = () => {
 
 
 const eventHub = document.querySelector("#container")
- 
+
 
 eventHub.addEventListener("click", clickEvent => {
 
