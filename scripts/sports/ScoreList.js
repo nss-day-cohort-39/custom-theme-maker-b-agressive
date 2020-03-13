@@ -7,9 +7,12 @@ export const ScoreList = () => {
 }
 
 const render = scoreCollection => {
+    const sortedScoreCollection = scoreCollection.sort((a,b) => {
+        return parseFloat(b.points) - parseFloat(a.points)
+    })
     return `
         <article class="container__panel scores">
-            ${scoreCollection.map(score => Score(score)).join("")}
+            ${sortedScoreCollection.map(score => Score(score)).join("")}
         </article>
     `
 }
