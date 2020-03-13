@@ -9,3 +9,4 @@ export const FavoriteItem = favorite => `
         <p class="favoriteItem_date">Date: ${favorite.timestamp}</p>
     </section>
 `
+
