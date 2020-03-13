@@ -37,3 +37,13 @@ eventHub.addEventListener("fontChosen", event => {
     contentTarget.classList = []
     contentTarget.classList.add("container__panel", "news", "scores", font)
 })
+
+eventHub.addEventListener("borderChosen", event => {
+    const border = event.detail.border
+
+    const contentTarget = document.querySelector(".news")
+    
+    
+    contentTarget.classList = []
+    contentTarget.classList.add("container__panel", "news", "scores", border)
+})
