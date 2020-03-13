@@ -24,8 +24,8 @@ eventHub.addEventListener("colorChosen", event => {
 
     const contentTarget = document.querySelector(".news")
 
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "news", "scores", color)
+    contentTarget.classList.remove("red", "purple", "green", "blue")
+    contentTarget.classList.add(color)
 })
 
 eventHub.addEventListener("fontChosen", event => {
@@ -34,8 +34,8 @@ eventHub.addEventListener("fontChosen", event => {
     const contentTarget = document.querySelector(".news")
     
     
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "news", "scores", font)
+    contentTarget.classList.remove("xsmall", "small", "large", "xlarge")
+    contentTarget.classList.add(font)
 })
 
 eventHub.addEventListener("borderChosen", event => {
@@ -44,6 +44,6 @@ eventHub.addEventListener("borderChosen", event => {
     const contentTarget = document.querySelector(".news")
     
     
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "news", "scores", border)
+    contentTarget.classList.remove("onepixel", "threepixels", "fivepixels")
+    contentTarget.classList.add(border)
 })

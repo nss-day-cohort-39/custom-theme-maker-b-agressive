@@ -1,3 +1,5 @@
+/* backgrounds */
+
 .blue {
     background-color: lightskyblue;
 }
@@ -14,6 +16,9 @@
     background-color: darksalmon;
 }
 
+
+/* fonts */
+
 .xsmall {
     font-size: x-small;
 }
@@ -29,6 +34,9 @@
 .xlarge {
     font-size: x-large;
 }
+
+/* borders */
+
 
 .onepixel {
     border: 1px solid black;
