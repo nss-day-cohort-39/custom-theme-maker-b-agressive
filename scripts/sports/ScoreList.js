@@ -17,31 +17,29 @@ const render = scoreCollection => {
 
 const eventHub = document.querySelector("#container")
 
- 
+
 
 eventHub.addEventListener("colorChosen", event => {
     const color = event.detail.color
 
     const contentTarget = document.querySelector(".scores")
 
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "scores", color)
+    contentTarget.classList.remove("red", "purple", "green", "blue")
+    contentTarget.classList.add(color)
 })
 
 eventHub.addEventListener("fontChosen", event => {
     const font = event.detail.font
 
     const contentTarget = document.querySelector(".scores")
-    
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "scores", font)
+    contentTarget.classList.remove("xsmall", "small", "large", "xlarge")
+    contentTarget.classList.add(font)
 })
 
 eventHub.addEventListener("borderChosen", event => {
     const border = event.detail.border
 
     const contentTarget = document.querySelector(".scores")
-    
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "scores", border)
+    contentTarget.classList.remove("onepixel", "threepixels", "fivepixels")
+    contentTarget.classList.add(border)
 })

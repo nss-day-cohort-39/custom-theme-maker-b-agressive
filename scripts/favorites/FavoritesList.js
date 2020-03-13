@@ -24,8 +24,8 @@ eventHub.addEventListener("colorChosen", event => {
     const color = event.detail.color
 
     const contentTarget = document.querySelector(".favorites")
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "favorites", color)
+    contentTarget.classList.remove("red", "purple", "green", "blue")
+    contentTarget.classList.add(color)
 
 })
 
@@ -35,8 +35,8 @@ eventHub.addEventListener("fontChosen", event => {
     const contentTarget = document.querySelector(".favorites")
   
 
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "favorites", font)
+    contentTarget.classList.remove("xsmall", "small", "large", "xlarge")
+    contentTarget.classList.add(font)
     
 })
 
@@ -46,7 +46,7 @@ eventHub.addEventListener("borderChosen", event => {
     const contentTarget = document.querySelector(".favorites")
   
 
-    contentTarget.classList = []
-    contentTarget.classList.add("container__panel", "favorites", border)
+    contentTarget.classList.remove("onepixel", "threepixels", "fivepixels")
+    contentTarget.classList.add(border)
     
 })
