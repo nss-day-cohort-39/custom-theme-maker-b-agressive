@@ -27,3 +27,13 @@ eventHub.addEventListener("colorChosen", event => {
     contentTarget.classList = []
     contentTarget.classList.add("container__panel", "news", "scores", color)
 })
+
+eventHub.addEventListener("fontChosen", event => {
+    const font = event.detail.font
+
+    const contentTarget = document.querySelector(".news")
+    
+    
+    contentTarget.classList = []
+    contentTarget.classList.add("container__panel", "news", "scores", font)
+})
