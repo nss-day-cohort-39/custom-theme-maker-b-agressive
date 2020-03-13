@@ -29,3 +29,15 @@
 .xlarge {
     font-size: x-large;
 }
+
+.onepixel {
+    border: 1px solid black;
+}
+
+.threepixels {
+    border: 3px solid black;
+}
+
+.fivepixels {
+    border: 5px solid black;
+}
