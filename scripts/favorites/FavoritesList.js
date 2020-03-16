@@ -50,3 +50,18 @@ eventHub.addEventListener("borderChosen", event => {
     contentTarget.classList.add(border)
     
 })
+
+let childrenVisible = true
+
+eventHub.addEventListener("visibilityToggled", e => {
+    if (e.detail.chosenComponent === "favorites") {
+        childrenVisible = !childrenVisible
+
+        const allFavoriteItems = document.querySelectorAll(".favoriteItem")
+
+        allFavoriteItems.forEach(item => childrenVisible
+            ? item.classList.remove("invisible")
+            : item.classList.add("invisible")
+        )
+    }
+})
