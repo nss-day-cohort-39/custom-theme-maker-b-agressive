@@ -1,6 +1,8 @@
 import { useScores } from "./ScoreProvider.js"
 import { Score } from "./Score.js"
 
+
+
 export const ScoreList = () => {
     const scores = useScores()
     return render(scores)
@@ -45,4 +47,23 @@ eventHub.addEventListener("borderChosen", event => {
     const contentTarget = document.querySelector(".scores")
     contentTarget.classList.remove("onepixel", "threepixels", "fivepixels")
     contentTarget.classList.add(border)
+})
+
+eventHub.addEventListener("toggleChosen", event => {
+    const toggle = event.detail.toggle
+    const scores = useScores()
+    if (toggle === "scores") {
+
+        const contentTarget = document.querySelector(".scores")
+        if (contentTarget.innerHTML === "") {
+            const sortedScoreCollection = scores.sort((a,b) => {
+                return parseFloat(b.points) - parseFloat(a.points)
+            })
+            contentTarget.innerHTML = `
+            ${sortedScoreCollection.map(score => Score(score)).join("")}
+            `
+        } else {
+            contentTarget.innerHTML = ""
+        }
+    }
 })

@@ -33,20 +33,32 @@ eventHub.addEventListener("fontChosen", event => {
     const font = event.detail.font
 
     const contentTarget = document.querySelector(".favorites")
-  
 
     contentTarget.classList.remove("xsmall", "small", "large", "xlarge")
     contentTarget.classList.add(font)
-    
 })
 
 eventHub.addEventListener("borderChosen", event => {
     const border = event.detail.border
 
     const contentTarget = document.querySelector(".favorites")
-  
 
     contentTarget.classList.remove("onepixel", "threepixels", "fivepixels")
     contentTarget.classList.add(border)
-    
+})
+
+eventHub.addEventListener("toggleChosen", event => {
+    const toggle = event.detail.toggle
+    const favoriteItems = useFavorites()
+    if (toggle === "favorites") {
+
+        const contentTarget = document.querySelector(".favorites")
+        if (contentTarget.innerHTML === "") {
+            contentTarget.innerHTML = `
+            ${favoriteItems.map(favorite => FavoriteItem(favorite)).join("")}
+            `
+        } else {
+            contentTarget.innerHTML = ""
+        }
+    }
 })
